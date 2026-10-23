@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
                 const _HeroBlock(),
                 const SizedBox(height: 22),
                 Text(
-                  'A calmer tin of milk',
+                  'Une première céréale, tout en douceur',
                   style: GoogleFonts.lexendDeca(
                     fontSize: 26,
                     fontWeight: FontWeight.w600,
@@ -35,9 +35,10 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  'Little Leaf is an infant formula made in small batches. '
-                  'We keep the ingredient list short, skip palm oil, and '
-                  'print only what a parent actually needs on the label.',
+                  'Little Leaf est un aliment de complément pour la diversification, '
+                  'à base de céréales, de légumineuses et de légumes. '
+                  'Les ingrédients sont locaux, la liste est courte, '
+                  'et la lyophilisation préserve ce qui compte pour bébé.',
                   style: GoogleFonts.lexendDeca(
                     fontSize: 15,
                     height: 1.55,
@@ -48,7 +49,7 @@ class HomePage extends StatelessWidget {
                 const _FactRow(),
                 const SizedBox(height: 22),
                 Text(
-                  'Inside the tin',
+                  'Dans le sachet',
                   style: GoogleFonts.lexendDeca(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
@@ -56,18 +57,20 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 const _IngredientTile(
-                  title: 'Organic lactose',
-                  body: 'The primary carbohydrate, the same sugar found in breast milk.',
+                  title: 'Riz et avoine',
+                  body: 'Des céréales douces et faciles à digérer, sources d\'énergie et de fibres.',
                 ),
                 const SizedBox(height: 10),
                 const _IngredientTile(
-                  title: 'Whey-dominant protein',
-                  body: 'A 60:40 whey-to-casein ratio in Stage 1, with DHA and ARA.',
+                  title: 'Lentilles',
+                  body: 'Riches en lysine, fer, zinc et folates. Associées aux céréales, '
+                      'elles complètent leurs protéines.',
                 ),
                 const SizedBox(height: 10),
                 const _IngredientTile(
-                  title: 'Plant oils, no palm',
-                  body: 'Sunflower, rapeseed, and coconut. Softer on digestion and on forests.',
+                  title: 'Légumes et fruits',
+                  body: 'Carotte, betterave, courgette et pomme, pour varier les saveurs '
+                      'dès les premières cuillères.',
                 ),
                 const SizedBox(height: 22),
                 AppCard(
@@ -76,7 +79,7 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Made to be used up',
+                        'Pensée pour préserver',
                         style: GoogleFonts.lexendDeca(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
@@ -84,8 +87,9 @@ class HomePage extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'What we cannot put in a tin is listed on Recycle. '
-                        'Whey, fibre, steel, and paper leave the plant through partners — never landfill first.',
+                        'Trempage des légumineuses, cuisson vapeur, puis lyophilisation : '
+                        'une texture lisse et peu épaisse, des nutriments mieux conservés '
+                        'et une longue conservation.',
                         style: GoogleFonts.lexendDeca(
                           fontSize: 13.5,
                           height: 1.5,
@@ -95,9 +99,9 @@ class HomePage extends StatelessWidget {
                       const SizedBox(height: 14),
                       Row(
                         children: [
-                          _TextLink(label: 'See the shop', onTap: onExplore),
+                          _TextLink(label: 'Voir la boutique', onTap: onExplore),
                           const SizedBox(width: 18),
-                          _TextLink(label: 'See waste streams', onTap: onRecycle),
+                          _TextLink(label: 'Voir le recyclage', onTap: onRecycle),
                         ],
                       ),
                     ],
@@ -167,7 +171,7 @@ class _HeroBlock extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Gentle nutrition\nfrom leaf to bottle.',
+                  'Une nutrition douce,\nde la graine à la cuillère.',
                   style: GoogleFonts.lexendDeca(
                     color: AppColors.white,
                     fontSize: 28,
@@ -177,7 +181,7 @@ class _HeroBlock extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 Text(
-                  'Stage 1 to 3 · organic dairy · recyclable steel tins',
+                  'Dès 6 mois · céréales et légumineuses · lyophilisé',
                   style: GoogleFonts.lexendDeca(
                     color: AppColors.cream.withValues(alpha: 0.9),
                     fontSize: 13,
@@ -199,11 +203,11 @@ class _FactRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(child: _FactChip(label: 'No palm oil')),
+        Expanded(child: _FactChip(label: 'Lyophilisé')),
         SizedBox(width: 10),
-        Expanded(child: _FactChip(label: 'DHA + ARA')),
+        Expanded(child: _FactChip(label: 'Dès 6 mois')),
         SizedBox(width: 10),
-        Expanded(child: _FactChip(label: '800 g tins')),
+        Expanded(child: _FactChip(label: 'Sans lait')),
       ],
     );
   }
