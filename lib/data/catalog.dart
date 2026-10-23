@@ -7,6 +7,7 @@ class Catalog {
   static const email = 'hello@littleleaf.com';
   static const phone = '+1 (800) 555-0148';
   static const brand = 'Little Leaf';
+  static const homeImage = 'assets/images/home_hero.jpg';
 
   static const products = <Product>[
     Product(
@@ -19,6 +20,7 @@ class Catalog {
       weight: '800 g',
       stage: ProductStage.stage1,
       icon: Icons.spa_outlined,
+      imageAsset: 'assets/images/product_s1.jpg',
     ),
     Product(
       id: 's1n',
@@ -30,6 +32,7 @@ class Catalog {
       weight: '800 g',
       stage: ProductStage.stage1,
       icon: Icons.nights_stay_outlined,
+      imageAsset: 'assets/images/product_s1n.jpg',
     ),
     Product(
       id: 's2',
@@ -41,6 +44,7 @@ class Catalog {
       weight: '800 g',
       stage: ProductStage.stage2,
       icon: Icons.eco_outlined,
+      imageAsset: 'assets/images/product_s2.jpg',
     ),
     Product(
       id: 's3',
@@ -52,6 +56,7 @@ class Catalog {
       weight: '800 g',
       stage: ProductStage.stage3,
       icon: Icons.park_outlined,
+      imageAsset: 'assets/images/product_s3.jpg',
     ),
     Product(
       id: 'gentle',
@@ -63,6 +68,7 @@ class Catalog {
       weight: '800 g',
       stage: ProductStage.specialty,
       icon: Icons.favorite_border,
+      imageAsset: 'assets/images/product_gentle.jpg',
     ),
     Product(
       id: 'goat',
@@ -74,6 +80,7 @@ class Catalog {
       weight: '800 g',
       stage: ProductStage.specialty,
       icon: Icons.agriculture_outlined,
+      imageAsset: 'assets/images/product_goat.jpg',
     ),
     Product(
       id: 'rtf',
@@ -85,6 +92,7 @@ class Catalog {
       weight: '8 × 70 ml',
       stage: ProductStage.stage1,
       icon: Icons.water_drop_outlined,
+      imageAsset: 'assets/images/product_rtf.jpg',
     ),
     Product(
       id: 'cereal',
@@ -96,6 +104,7 @@ class Catalog {
       weight: '250 g',
       stage: ProductStage.stage2,
       icon: Icons.grain_outlined,
+      imageAsset: 'assets/images/product_cereal.jpg',
     ),
   ];
 
@@ -108,6 +117,7 @@ class Catalog {
           'Surplus whey remaining after standardisation. Suitable for animal feed blenders or further food processing.',
       volume: '2–4 t / week',
       icon: Icons.science_outlined,
+      imageAsset: 'assets/images/waste_whey.jpg',
     ),
     WasteItem(
       id: 'lactose',
@@ -117,6 +127,7 @@ class Catalog {
           'Off-cut lactose crystals from drying. Food-adjacent, not packed for infant use.',
       volume: '800 kg / week',
       icon: Icons.bubble_chart_outlined,
+      imageAsset: 'assets/images/waste_lactose.jpg',
     ),
     WasteItem(
       id: 'fiber',
@@ -126,6 +137,7 @@ class Catalog {
           'Pressed fibre from oil and DHA filtration. Useful as compost feedstock or biogas.',
       volume: '1.2 t / week',
       icon: Icons.grass,
+      imageAsset: 'assets/images/waste_fiber.jpg',
     ),
     WasteItem(
       id: 'offspec',
@@ -135,6 +147,7 @@ class Catalog {
           'Batches that miss retail spec (colour or moisture) but remain safe for non-infant food use.',
       volume: 'variable',
       icon: Icons.inventory_2_outlined,
+      imageAsset: 'assets/images/waste_offspec.jpg',
     ),
     WasteItem(
       id: 'steel',
@@ -144,6 +157,7 @@ class Catalog {
           'Clean steel leftover from can forming. Recyclers and small fabricators welcome.',
       volume: '300 kg / week',
       icon: Icons.hardware_outlined,
+      imageAsset: 'assets/images/waste_steel.jpg',
     ),
     WasteItem(
       id: 'kraft',
@@ -153,6 +167,7 @@ class Catalog {
           'Outer wrap trimmings, unprinted. Good for pulp or packing fill.',
       volume: '150 kg / week',
       icon: Icons.description_outlined,
+      imageAsset: 'assets/images/waste_kraft.jpg',
     ),
     WasteItem(
       id: 'oil',
@@ -162,6 +177,7 @@ class Catalog {
           'Used blending oil from the lipid line. Suitable for biodiesel partners.',
       volume: '400 L / week',
       icon: Icons.opacity_outlined,
+      imageAsset: 'assets/images/waste_oil.jpg',
     ),
   ];
 }

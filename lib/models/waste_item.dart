@@ -8,6 +8,7 @@ class WasteItem {
     required this.summary,
     required this.volume,
     required this.icon,
+    required this.imageAsset,
   });
 
   final String id;
@@ -16,4 +17,5 @@ class WasteItem {
   final String summary;
   final String volume;
   final IconData icon;
+  final String imageAsset;
 }

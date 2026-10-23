@@ -5,6 +5,7 @@ import '../data/catalog.dart';
 import '../theme/app_colors.dart';
 import '../widgets/app_card.dart';
 import '../widgets/leaf_mark.dart';
+import '../widgets/photo_frame.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key, this.onExplore, this.onRecycle});
@@ -118,37 +119,71 @@ class _HeroBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       color: AppColors.forest,
-      padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
+      padding: EdgeInsets.zero,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const LeafMark(size: 56),
-          const SizedBox(height: 18),
-          Text(
-            Catalog.brand,
-            style: GoogleFonts.lexendDeca(
-              color: AppColors.cream,
-              fontSize: 13,
-              letterSpacing: 1.4,
-              fontWeight: FontWeight.w500,
-            ),
+          Stack(
+            children: [
+              const PhotoFrame(
+                asset: Catalog.homeImage,
+                height: 210,
+                borderRadius: BorderRadius.zero,
+              ),
+              Positioned.fill(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        AppColors.forest.withValues(alpha: 0.15),
+                        AppColors.forest.withValues(alpha: 0.72),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const Positioned(
+                left: 18,
+                top: 18,
+                child: LeafMark(size: 48),
+              ),
+            ],
           ),
-          const SizedBox(height: 8),
-          Text(
-            'Gentle nutrition\nfrom leaf to bottle.',
-            style: GoogleFonts.lexendDeca(
-              color: AppColors.white,
-              fontSize: 28,
-              height: 1.2,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          const SizedBox(height: 12),
-          Text(
-            'Stage 1 to 3 · organic dairy · recyclable steel tins',
-            style: GoogleFonts.lexendDeca(
-              color: AppColors.cream.withValues(alpha: 0.9),
-              fontSize: 13,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(22, 20, 22, 22),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  Catalog.brand,
+                  style: GoogleFonts.lexendDeca(
+                    color: AppColors.cream,
+                    fontSize: 13,
+                    letterSpacing: 1.4,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'Gentle nutrition\nfrom leaf to bottle.',
+                  style: GoogleFonts.lexendDeca(
+                    color: AppColors.white,
+                    fontSize: 28,
+                    height: 1.2,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  'Stage 1 to 3 · organic dairy · recyclable steel tins',
+                  style: GoogleFonts.lexendDeca(
+                    color: AppColors.cream.withValues(alpha: 0.9),
+                    fontSize: 13,
+                  ),
+                ),
+              ],
             ),
           ),
         ],

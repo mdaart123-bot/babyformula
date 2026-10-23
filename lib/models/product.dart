@@ -12,6 +12,7 @@ class Product {
     required this.weight,
     required this.stage,
     required this.icon,
+    required this.imageAsset,
   });
 
   final String id;
@@ -22,6 +23,7 @@ class Product {
   final String weight;
   final ProductStage stage;
   final IconData icon;
+  final String imageAsset;
 
   String get priceLabel => '\$${price.toStringAsFixed(2)}';
 }

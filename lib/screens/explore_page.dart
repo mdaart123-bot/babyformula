@@ -6,6 +6,7 @@ import '../models/product.dart';
 import '../state/cart_controller.dart';
 import '../theme/app_colors.dart';
 import '../widgets/app_card.dart';
+import '../widgets/photo_frame.dart';
 import '../widgets/primary_button.dart';
 
 class ExplorePage extends StatefulWidget {
@@ -188,21 +189,22 @@ class _ProductCard extends StatelessWidget {
     final cart = CartScope.of(context);
 
     return AppCard(
+      padding: EdgeInsets.zero,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          PhotoFrame(
+            asset: product.imageAsset,
+            height: 168,
+            borderRadius: BorderRadius.zero,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
           Row(
             children: [
-              Container(
-                width: 56,
-                height: 56,
-                decoration: BoxDecoration(
-                  color: AppColors.cream,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Icon(product.icon, color: AppColors.forest),
-              ),
-              const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -256,6 +258,9 @@ class _ProductCard extends StatelessWidget {
                 ),
               );
             },
+          ),
+              ],
+            ),
           ),
         ],
       ),
